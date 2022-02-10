@@ -1,5 +1,12 @@
 # go_error_handle
-goのエラーハンドリングあれこれ（備忘）
+goのエラー設計、ハンドリングあれこれ（備忘）
 ## 前提
-APIサーバーをgoで作成
-エラー内容によってHTTPステータスを変化させたい
+```
+以下のような層になっている場合に、各層のErrorをWrapしていく
+
+usecase
+    ↓
+service
+    ↓
+repository
+```
